@@ -9,6 +9,11 @@
     /* color: black; */
     color: white;
 }
+.scrollCover .linkItem{
+    text-decoration: none;
+    /* color: black; */
+    color: #000;
+}
 
 /* .linkItem:hover{
    border-bottom: 1px solid gold;
@@ -55,6 +60,7 @@
     left: 0;
     width: 100%;
     z-index: 5; 
+    
 
     
 }
@@ -76,6 +82,7 @@
     background-color: #f7f7f7;
     margin-right: 30px;
     border-radius: 15px;
+    /* color: #000; */
     /* background-color: green; */
 }
 
@@ -125,6 +132,7 @@
     list-style: none;
 
     cursor: pointer;
+    /* color: #000; */
 
 }
 .listItems .secItem li{

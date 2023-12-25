@@ -114,7 +114,8 @@ function NavBar() {
 
                                 </li> */}
 
-                                <li className='serviceItem'><Link to={"/"} className='linkItem'>Skin care</Link></li>
+                                <li className='serviceItem'><a className='linkItem' href="#Iggy">Skin care</a> </li>
+                                <li className='serviceItem'><Link to={"/#Iggy"} className='linkItem'>Skin care</Link></li>
                                 <li className='serviceItem'><Link to={"/"} className='linkItem'>Lips</Link></li>
                                 <li className='serviceItem'><Link to={"/"} className='linkItem'>Eyes</Link></li>
                                 <li className='serviceItem'><Link to={"/"} className='linkItem'>Accessories</Link></li>

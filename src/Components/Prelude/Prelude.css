@@ -1,0 +1,26 @@
+
+
+.PreludeCover{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.PreludeCover h2,p{
+    padding: 0;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 730px){   
+
+
+        .PreludeCover{
+            
+            padding: 0 5px;
+            text-align: center;
+        }
+
+
+}

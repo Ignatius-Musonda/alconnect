@@ -9,7 +9,10 @@ import { useEffect, useRef, useState } from "react";
 import { animate, motion, useMotionValue, useScroll } from "framer-motion";
 import img1 from "../Images/Alcon1.jpg"
 
-export default function SlideCarousel() {
+export default function SlideCarousel({Heading, CarouselData}) {
+
+
+
   const ref = useRef(null);
   const { scrollXProgress } = useScroll({ container: ref });
   const [startX, setStartX] = useState(0);
@@ -83,10 +86,50 @@ export default function SlideCarousel() {
     }
   };
 
+  const cardData = [ 
+    { 
+       ImgUrl: img1,
+       Name: "Snowflake Chartels", 
+       Title: "Nike Converse",
+       Price: 300
+ 
+    },
+    { 
+       ImgUrl: img1,
+       Name: "Zed Watch Guy", 
+       Title: "Casio Classic Watch",
+       Price: 250
+ 
+    }, 
+     { 
+       ImgUrl: img1,
+       Name: "Snowflakes Chartel", 
+       Title: "Airforce Converse",
+       Price: 300
+ 
+    }, 
+     { 
+       ImgUrl: img1,
+       Name: "Snowflakes Chartel", 
+       Title: "Airforce Converse",
+       Price: 300
+ 
+    }, 
+ 
+ 
+   ]
+
   return (
     <>  
 
-        <div className="carouselCover">
+    <div className="carouselCover" id="Iggy">
+
+        <div className="Prewording">
+
+                <h2>{Heading}</h2>
+
+        </div>
+
 
     
       <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
@@ -109,9 +152,50 @@ export default function SlideCarousel() {
         onScroll={handleScroll}
         className="carouselList"
       >
-        {items.map((idx) => (
+        {CarouselData.map((idx) => (
           <motion.li onClick={()=>{console.log("have been clicke",idx)}}  key={idx}>
-            <img className="carouselImg" src={img1} />
+
+                   <div className="ListingDisplayCover">
+                        {CarouselData && CarouselData.map((index,key)=>{
+                            return( 
+                            
+
+                                    <div className="ListingItemCard" key={key}>
+
+                                            <div className="ListingImg">
+
+                                                    <img src={img1} />
+
+                                            </div>
+                                            <div className="ListingStore"> 
+
+                                                    <p><b>{index.Name}</b></p>
+
+                                            </div>
+                                            <div className="ListingDetails">
+
+                                                    <div className="ListingName">
+                                                        <p>{index.Title}</p>
+
+                                                    </div>
+                                                    <div className="ListingPrice">
+
+                                                            <p>{`ZMK ${index.Price}`}</p>
+
+                                                    </div>
+
+                                            </div>
+
+                                    </div>
+
+                        
+                                    
+                                )
+                            })}
+
+                </div>
+                        
+            {/* <img className="carouselImg" src={img1} /> */}
           </motion.li>
 
         ))}
