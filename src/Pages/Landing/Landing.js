@@ -10,6 +10,7 @@ import SlideCarousel from "../../Components/SlideCarousel/SlideCarousel";
 import Prelude from "../../Components/Prelude/Prelude";
 // import img1 from "../Images/Alcon1.jpg"
 import img1 from "../../Components/Images/Alcon1.jpg"
+import ProductWording from "../../Components/ProductWording/ProductWording";
 
 
 function Landing() {
@@ -58,18 +59,17 @@ function Landing() {
             <Prelude/>
             <SlideCarousel
 
-
                    CarouselData={cardData}
                    Heading={"Skin Care"}
             
             />
             <SlideCarousel
 
-
                    CarouselData={cardData}
                    Heading={"Lips"}
             
             />
+            <ProductWording/>
 
             {/* <SlideCarousel/> */}
             
