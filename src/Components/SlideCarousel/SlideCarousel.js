@@ -1,14 +1,15 @@
 
 
 
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
 
-import "./styles.css";
+import "./SlideCarousel.css";
 import { useEffect, useRef, useState } from "react";
 import { animate, motion, useMotionValue, useScroll } from "framer-motion";
+import img1 from "../Images/Alcon1.jpg"
 
-export default function App() {
+export default function SlideCarousel() {
   const ref = useRef(null);
   const { scrollXProgress } = useScroll({ container: ref });
   const [startX, setStartX] = useState(0);
@@ -83,7 +84,11 @@ export default function App() {
   };
 
   return (
-    <>
+    <>  
+
+        <div className="carouselCover">
+
+    
       <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
         <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
         <motion.circle
@@ -102,11 +107,16 @@ export default function App() {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
         onScroll={handleScroll}
+        className="carouselList"
       >
         {items.map((idx) => (
-          <motion.li onClick={()=>{console.log("have been clicke",idx)}}  key={idx}></motion.li>
+          <motion.li onClick={()=>{console.log("have been clicke",idx)}}  key={idx}>
+            <img className="carouselImg" src={img1} />
+          </motion.li>
+
         ))}
       </motion.ul>
+      </div>
     </>
   );
 }

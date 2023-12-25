@@ -6,6 +6,8 @@ import "./Landing.css"
 import NavBar from "../../Components/NavBar/NavBar";
 import HeroSection from "../../Components/HeroSection/HeroSection";
 
+import SlideCarousel from "../../Components/SlideCarousel/SlideCarousel";
+
 
 
 function Landing() {
@@ -17,6 +19,10 @@ function Landing() {
 
         <div className="LandingWholeCnt">
             <HeroSection/>
+            <SlideCarousel/>
+            <SlideCarousel/>
+            
+            
 
             {/* <NavBar/> */}
 
