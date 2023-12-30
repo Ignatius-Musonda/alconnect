@@ -7,7 +7,12 @@
 import "./SlideCarousel.css";
 import { useEffect, useRef, useState } from "react";
 import { animate, motion, useMotionValue, useScroll } from "framer-motion";
-import img1 from "../Images/Alcon1.jpg"
+// import img1 from "../Images/Alcon1.jpg"
+import img2 from "../Images/Alcon7.jpg"
+import img3 from "../Images/Alcon3.jpg"
+// import img1 from "../Images/Alcon1.jpg"
+// import img1 from "../Images/Alcon1.jpg"
+// import img1 from "../Images/Alcon1.jpg"
 
 export default function SlideCarousel({Heading, CarouselData}) {
 
@@ -87,34 +92,34 @@ export default function SlideCarousel({Heading, CarouselData}) {
   };
 
   const cardData = [ 
-    { 
-       ImgUrl: img1,
-       Name: "Snowflake Chartels", 
-       Title: "Nike Converse",
-       Price: 300
+    // { 
+    //    ImgUrl: img1,
+    //    Name: "Snowflake Chartels", 
+    //    Title: "Nike Converse",
+    //    Price: 300
  
-    },
+    // },
     { 
-       ImgUrl: img1,
+       ImgUrl: img2,
        Name: "Zed Watch Guy", 
        Title: "Casio Classic Watch",
        Price: 250
  
     }, 
      { 
-       ImgUrl: img1,
+       ImgUrl: img3,
        Name: "Snowflakes Chartel", 
        Title: "Airforce Converse",
        Price: 300
  
     }, 
-     { 
-       ImgUrl: img1,
-       Name: "Snowflakes Chartel", 
-       Title: "Airforce Converse",
-       Price: 300
+    //  { 
+    //    ImgUrl: img1,
+    //    Name: "Snowflakes Chartel", 
+    //    Title: "Airforce Converse",
+    //    Price: 300
  
-    }, 
+    // }, 
  
  
    ]
@@ -152,35 +157,38 @@ export default function SlideCarousel({Heading, CarouselData}) {
         onScroll={handleScroll}
         className="carouselList"
       >
-        {CarouselData.map((idx) => (
-          <motion.li onClick={()=>{console.log("have been clicke",idx)}}  key={idx}>
+        {CarouselData && CarouselData.map((item,index) => {
+
+            return(
+          <motion.li onClick={()=>{console.log("have been clicke",item)}}  key={index}>
 
                    <div className="ListingDisplayCover">
-                        {CarouselData && CarouselData.map((index,key)=>{
-                            return( 
+                      
+                         
                             
 
-                                    <div className="ListingItemCard" key={key}>
+                                    <div className="ListingItemCard" key={index}>
 
                                             <div className="ListingImg">
 
-                                                    <img src={img1} />
+                                                    {/* <img src={img1} /> */}
+                                                    <img src={item.ImgUrl} />
 
                                             </div>
                                             <div className="ListingStore"> 
 
-                                                    <p><b>{index.Name}</b></p>
+                                                    <p><b>{item.Name}</b></p>
 
                                             </div>
                                             <div className="ListingDetails">
 
                                                     <div className="ListingName">
-                                                        <p>{index.Title}</p>
+                                                        <p>{item.Title}</p>
 
                                                     </div>
                                                     <div className="ListingPrice">
 
-                                                            <p>{`ZMK ${index.Price}`}</p>
+                                                            <p>{`ZMK ${item.Price}`}</p>
 
                                                     </div>
 
@@ -188,17 +196,18 @@ export default function SlideCarousel({Heading, CarouselData}) {
 
                                     </div>
 
-                        
-                                    
-                                )
-                            })}
+
+                            
+                          
+                            
+                         
 
                 </div>
                         
-            {/* <img className="carouselImg" src={img1} /> */}
+          
           </motion.li>
 
-        ))}
+                            )})}
       </motion.ul>
       </div>
     </>
