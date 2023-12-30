@@ -11,7 +11,9 @@
     height: 90vh;
     background-color: black;
     background-image: url("../Images/Alcon1.jpg");
+    background-position: center;
     background-size: cover;
+    
 
     /* animation: slide 30s;  */
 }
