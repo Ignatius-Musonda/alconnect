@@ -109,7 +109,11 @@ body {
     text-decoration: none;
     color: var(--accent);
   } */
-
+   
+  .linkItems{
+    text-decoration: none;
+    color: initial;
+  }
   .carouselCover{
     position: relative;
     padding-left: 30px;

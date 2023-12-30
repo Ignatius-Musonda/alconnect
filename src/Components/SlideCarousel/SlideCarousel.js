@@ -10,6 +10,7 @@ import { animate, motion, useMotionValue, useScroll } from "framer-motion";
 // import img1 from "../Images/Alcon1.jpg"
 import img2 from "../Images/Alcon7.jpg"
 import img3 from "../Images/Alcon3.jpg"
+import { Link } from "react-router-dom";
 // import img1 from "../Images/Alcon1.jpg"
 // import img1 from "../Images/Alcon1.jpg"
 // import img1 from "../Images/Alcon1.jpg"
@@ -160,8 +161,9 @@ export default function SlideCarousel({Heading, CarouselData}) {
         {CarouselData && CarouselData.map((item,index) => {
 
             return(
-          <motion.li onClick={()=>{console.log("have been clicke",item)}}  key={index}>
+          <motion.li  onClick={()=>{console.log("have been clicke",item)}}  key={index}>
 
+                <Link className="linkItems" to={"/ProductOrder"}>
                    <div className="ListingDisplayCover">
                       
                          
@@ -203,6 +205,7 @@ export default function SlideCarousel({Heading, CarouselData}) {
                          
 
                 </div>
+                </Link>
                         
           
           </motion.li>

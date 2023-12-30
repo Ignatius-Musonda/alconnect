@@ -108,22 +108,41 @@
   }
   
 
-  @media screen (max-width: 730px) {
+  /* @media screen (max-width: 730px) { */
 
+    @media screen and (max-width: 730px){   
 
-    .ProductWordingCover{
-        /* display: flex;
-        flex-wrap: wrap;
-        height: 300px;
-        column-gap: 30px;
-        background-color: #000;
-        color: white;
-        overflow: hidden;
-        border-radius: 10px; */
-        height : auto;
-        background-color: white;
+        .ProductWordingContainer{
+            background-color: white;
+            padding: 20px;
+           }
         
-   
+
+        .ProductWordingCover{
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            column-gap: 30px;
+            background-color: #000;
+            color: white;
+            overflow: hidden;
+            border-radius: 10px;
+       
+          }
+
+
+    .imagePart {
+        flex: 1; 
+        
+        /* margin-right: 20px; */
+        overflow: hidden;
+        min-height: auto;
+        max-height: 250px;
+        min-width: 200px;
+    
+        
       }
+
+     
     
   }
