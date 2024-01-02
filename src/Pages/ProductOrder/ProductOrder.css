@@ -30,11 +30,13 @@
 .imgSelf{
     /* position: fixed; */
     /* top:5px; */
+    overflow: hidden;
 }
 
 .ImgVizContainer{
     flex: 1;
     min-width: 450px;
+    overflow: hidden;
 }
 
 .CardWordingCont{
@@ -121,8 +123,14 @@
 
         display: flex;
         flex-wrap: wrap;
-        padding: 20px;
-        column-gap: 30px;
+        padding: 10px;
+        column-gap: 10px;
+    }
+
+    .ImgVizContainer{
+        flex: 1;
+        min-width: 350px;
+        /* background-color: red; */
     }
 
 
